@@ -9,8 +9,13 @@ print("")
 
 for i in range(0,no_of_views):
     browser = webdriver.Firefox()
+
     browser.get(url)
+
     browser.find_element_by_tag_name('body').send_keys(Keys.SPACE)
+    
     time.sleep(duration)
+    
     print(str(i+1) + " iterations done")
+    
     browser.quit()
